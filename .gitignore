@@ -17,3 +17,6 @@ apps/helios/ui/src/content/docs/
 # Standalone AMP build and Python environment
 .venv-helios-amp/
 .amp-tools/
+
+# Machine-specific MCP endpoint credentials stay local.
+/.cursor/mcp.json

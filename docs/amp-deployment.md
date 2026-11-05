@@ -131,6 +131,9 @@ Never use those settings to establish CAI authentication acceptance.
 
 ## Verification and live-test gate
 
+Upstream `Christopheraburns/helios` main was fetched again on 5 November 2026 at `72818c4`.
+The AMP branch contains that commit; no later upstream application changes were available.
+
 The local rehearsal installed the Python 3.12 environment, passed `pip check`, built the UI, and verified native imports and metadata migration.
 All 13 packaging tests passed, covering manifest sequencing, API identity, streaming, route isolation, SPA routing, asset caching, startup guards, child failure, and archive checksum failure.
 The native API/UI local health checks passed.
