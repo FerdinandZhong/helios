@@ -1,5 +1,8 @@
 # Helios API and UI deployment on Cloudera AI
 
+For the combined authenticated Application, use the [standalone AMP guide](amp-deployment.md) and root `.project-metadata.yaml`.
+The two-Application procedure below remains available for separate UI/API deployments.
+
 This is the deployment runbook for two authenticated Applications in one
 Cloudera AI Project:
 

@@ -1,5 +1,9 @@
 # helios
 
+Deploy this checkout with the root [AMP manifest](.project-metadata.yaml).
+The [standalone AMP guide](docs/amp-deployment.md) covers the authenticated UI/API Application, native grants, and Semantic Hub connection.
+The AMP package passed local rehearsal; live CAI acceptance remains pending.
+
 **Connect it to your Cloudera data lake and it helps your users speak to their data.**
 
 helios is an engine that runs inside Cloudera AI Workbench, inspects an existing Cloudera lakehouse — whatever engine fronts it: Impala, Hive, Spark — and generates the layers of meaning that sit between raw tables and a human (or agent) asking a question in plain language:

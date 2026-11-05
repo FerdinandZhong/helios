@@ -1,0 +1,43 @@
+name: Helios Semantic Builder
+description: >-
+  Standalone Helios semantic builder and Talk to Your Data, with the native
+  UI and API behind one authenticated Cloudera AI Application origin.
+author: Cloudera Engineering
+date: '2026-11-04'
+specification_version: '1.0'
+prototype_version: '1.0'
+runtimes:
+  - editor: JupyterLab
+    kernel: Python 3.12
+    edition: Standard
+environment_variables:
+  HELIOS_METADATA_DB:
+    default: /home/cdsw/state/helios.db
+    description: Persistent native metadata database. Retain this file and its accompanying files across restarts.
+    required: true
+  HELIOS_SQLITE_JOURNAL_MODE:
+    default: DELETE
+    description: DELETE is the default for the shared project filesystem. Use WAL only after single-host storage verification.
+    required: true
+tasks:
+  - type: create_job
+    name: helios-amp-setup
+    entity_label: helios-amp-setup
+    script: cai_amp/setup.py
+    kernel: python3
+    cpu: 2
+    memory: 8
+    timeout: 60
+  - type: run_job
+    entity_label: helios-amp-setup
+    wait_for: true
+  - type: start_application
+    name: Helios
+    entity_label: helios-app
+    subdomain: helios
+    script: cai_amp/launch.py
+    kernel: python3
+    cpu: 2
+    memory: 8
+    gpu: 0
+    bypass_authentication: false

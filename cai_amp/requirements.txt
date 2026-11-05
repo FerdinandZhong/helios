@@ -1,0 +1,2 @@
+# AMP dependency baseline; see docs/amp-deployment.md for upstream overrides.
+-r requirements.lock

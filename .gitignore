@@ -13,3 +13,7 @@ apps/ui/dist/
 apps/helios/ui/dist/
 apps/helios/ui/src/content/docs/
 *.tsbuildinfo
+
+# Standalone AMP build and Python environment
+.venv-helios-amp/
+.amp-tools/
